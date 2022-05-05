@@ -7,7 +7,7 @@
           <div class="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span class="sr-only">Workflow</span>
-              <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="" />
+              <img class="h-8 w-auto sm:h-10" src="../assets/itqanlogo.png" alt="" />
             </a>
           </div>
           <div class="-mr-2 -my-2 md:hidden">
@@ -19,7 +19,7 @@
           <PopoverGroup as="nav" class="hidden md:flex space-x-10">
             <Popover class="relative" v-slot="{ open }">
               <PopoverButton :class="[open ? 'text-gray-900' : 'text-gray-500', 'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500']">
-                <span>Solutions</span>
+                <span>Home</span>
                 <ChevronDownIcon :class="[open ? 'text-gray-600' : 'text-gray-400', 'ml-2 h-5 w-5 group-hover:text-gray-500']" aria-hidden="true" />
               </PopoverButton>
 
@@ -51,11 +51,11 @@
             </a>
           </PopoverGroup>
           <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+            <!-- <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
               Sign in
-            </a>
+            </a> -->
             <a href="#" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-              Sign up
+              ASK A FATWA
             </a>
           </div>
         </div>
@@ -66,7 +66,7 @@
               <div class="pt-5 pb-6 px-5">
                 <div class="flex items-center justify-between">
                   <div>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow" />
+                    <img class="h-8 w-auto" src="../assets/itqanlogo.png" alt="Workflow" />
                   </div>
                   <div class="-mr-2">
                     <PopoverButton class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -125,19 +125,19 @@
               </div>
               <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                 <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                  <span class="block text-white">Take control of your</span>
-                  <span class="block text-indigo-200">customer support</span>
+                  <span class="block text-white">Excellence and Proficiency </span>
+                  <span class="block text-indigo-200">in the Sacred Sciences</span>
                 </h1>
                 <p class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                  ‘Itqan’ means to do something excellently, proficiently and in the best way. Our vision at Itqan Institute is to contribute to a revival of the Islamic sacred sciences in a way that is authentic and grounded, with professionalism and good organisation.
                 </p>
                 <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                   <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                     <a href="#" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">
-                      Get started
+                      Ask a Fatwa
                     </a>
                     <a href="#" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8">
-                      Live demo
+                      Read Fatwas
                     </a>
                   </div>
                 </div>
@@ -212,9 +212,11 @@ const solutions = [
   },
 ]
 const navigation = [
-  { name: 'Pricing', href: '#' },
-  { name: 'Partners', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'About Us', href: '#' },
+  { name: 'Fatwa', href: '#' },
+  { name: 'Publications', href: '#' },
+  { name: 'Donate', href: '#' },
+  { name: 'Contact Us', href: '#' },
 ]
 
 export default {
