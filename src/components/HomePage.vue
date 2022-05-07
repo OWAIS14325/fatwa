@@ -34,7 +34,7 @@
             <div class="flex items-center flex-1">
               <div class="flex items-center justify-between w-full md:w-auto">
                 <a href="#">
-                  <span class="sr-only">Workflow</span>
+                  <span class="sr-only">Itqan Institute</span>
                   <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-teal-200-cyan-400.svg" alt="" />
                 </a>
                 <div class="-mr-2 flex items-center md:hidden">
@@ -52,7 +52,7 @@
               <!-- <a href="#" class="text-base font-medium text-white hover:text-gray-300">
                 Log in
               </a> -->
-              <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">
+              <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-amber-500 hover:bg-amber-700">
                 ASK A FATWA
               </a>
             </div>
@@ -95,13 +95,13 @@
               <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                 <div class="lg:py-24">
                   <a href="#" class="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
-                    <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full">Read Fatwas</span>
+                    <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-amber-500 to-orange-600 rounded-full">Read Fatwas</span>
                     <span class="ml-4 text-sm">Visit our fatwa page</span>
                     <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
                   </a>
                   <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                     <span class="block">Welcome to</span>
-                    <span class="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 sm:pb-5">Itqan Institute</span>
+                    <span class="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-orange-400 sm:pb-5">Itqan Institute</span>
                   </h1>
                   <p class="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
                     Excellence and Proficiency in the Sacred Sciences
@@ -114,7 +114,7 @@
                           <input id="email" type="email" placeholder="Search Fatwas" class="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900" />
                         </div>
                         <div class="mt-3 sm:mt-0 sm:ml-3">
-                          <button type="submit" class="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-medium hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900">Search Fatwas</button>
+                          <button type="submit" class="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium hover:from-amber-600 hover:to-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900">Search Fatwas</button>
                         </div>
                       </div>
                       <!-- <p class="mt-3 text-sm text-gray-300 sm:mt-4">Start your free 14-day trial, no credit card necessary. By providing your email, you agree to our <a href="#" class="font-medium text-white">terms of service</a>.</p> -->
@@ -136,7 +136,7 @@
         <div class="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
           <div class="relative">
             <div class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-              <h2 class="text-base font-semibold tracking-wider text-cyan-600 uppercase">Read</h2>
+              <h2 class="text-base font-semibold tracking-wider text-amber-600 uppercase">Read</h2>
               <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
                 Latest Questions
               </p>
@@ -148,7 +148,7 @@
                 </div>
                 <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                   <div class="flex-1">
-                    <p class="text-sm font-medium text-cyan-600">
+                    <p class="text-sm font-medium text-amber-600">
                       <a :href="post.category.href" class="hover:underline">
                         {{ post.category.name }}
                       </a>
@@ -194,7 +194,7 @@
         <!-- Feature section with grid -->
         <div class="relative bg-white py-16 sm:py-24 lg:py-32">
           <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-            <h2 class="text-base font-semibold tracking-wider text-cyan-600 uppercase">READ BY CATEGORY</h2>
+            <h2 class="text-base font-semibold tracking-wider text-amber-600 uppercase">READ BY CATEGORY</h2>
             <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
               Question Categories
             </p>
@@ -207,7 +207,7 @@
                   <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                     <div class="-mt-6">
                       <div>
-                        <span class="inline-flex items-center justify-center p-3 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-md shadow-lg">
+                        <span class="inline-flex items-center justify-center p-3 bg-gradient-to-r from-amber-500 to-orange-600 rounded-md shadow-lg">
                           <component :is="feature.icon" class="h-6 w-6 text-white" aria-hidden="true" />
                         </span>
                       </div>
@@ -224,7 +224,7 @@
         </div>
 
         <!-- Testimonial section -->
-        <div class="pb-16 bg-gradient-to-r from-teal-500 to-cyan-600 lg:pb-0 lg:z-10 lg:relative">
+        <div class="pb-16 bg-gradient-to-r from-amber-500 to-orange-600 lg:pb-0 lg:z-10 lg:relative">
           <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
             <div class="relative lg:-my-8">
               <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden" />
@@ -260,7 +260,7 @@
         <div class="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
           <div class="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
             <div>
-              <h2 class="text-base font-semibold tracking-wider text-cyan-600 uppercase">WANT TO LEARN MORE ?</h2>
+              <h2 class="text-base font-semibold tracking-wider text-amber-600 uppercase">WANT TO LEARN MORE ?</h2>
               <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
                 OUR ONLINE COURSES
               </p>
@@ -273,9 +273,9 @@
         </div>
         <!-- CTA Section -->
         <div class="relative bg-gray-900">
-          <div class="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+          <div class="relative h-56 bg-amber-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
             <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100" alt="" />
-            <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-600 mix-blend-multiply" />
+            <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-600 mix-blend-multiply" />
           </div>
           <div class="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
             <div class="md:ml-auto md:w-1/2 md:pl-10">
@@ -373,7 +373,7 @@
           </div>
           <div class="mt-12 border-t border-gray-200 py-8">
             <p class="text-base text-gray-400 xl:text-center">
-              &copy; 2020 Workflow, Inc. All rights reserved.
+              &copy; 2022 Itqan Institute, Inc. All rights reserved.
             </p>
           </div>
         </div>
