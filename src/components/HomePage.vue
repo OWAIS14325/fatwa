@@ -29,13 +29,13 @@
   <div class="bg-white">
     <div class="relative overflow-hidden">
       <Popover as="header" class="relative">
-        <div class="bg-gray-900 pt-6">
+        <div class="bg-gray-900 py-6">
           <nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
             <div class="flex items-center flex-1">
               <div class="flex items-center justify-between w-full md:w-auto">
                 <a href="#">
                   <span class="sr-only">Itqan Institute</span>
-                  <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-teal-200-cyan-400.svg" alt="" />
+                  <img class="h-8 w-auto sm:h-10" src="../assets/Weblogo_white.png" alt="" />
                 </a>
                 <div class="-mr-2 flex items-center md:hidden">
                   <PopoverButton class="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
@@ -64,7 +64,7 @@
             <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div class="px-5 pt-4 flex items-center justify-between">
                 <div>
-                  <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-teal-500-cyan-600.svg" alt="" />
+                  <img class="h-8 w-auto" src="../assets/Weblogo.png" alt="" />
                 </div>
                 <div class="-mr-2">
                   <PopoverButton class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600">
@@ -89,7 +89,7 @@
         </transition>
       </Popover>
       <main>
-        <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+        <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden bg-[url('../assets/banner_2.jpg')] bg-no-repeat bg-cover">
           <div class="mx-auto max-w-7xl lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-8">
               <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
@@ -125,7 +125,7 @@
               <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
                 <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                   <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
-                  <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/cloud-illustration-teal-cyan.svg" alt="" />
+                  <!-- <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="../assets/banner.png" alt="" /> -->
                 </div>
               </div>
             </div>
