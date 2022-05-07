@@ -1,13 +1,12 @@
 <template>
-  <fatwa-header />
-  <router-view/>
+  <home-page />
 </template>
 
 <script>
-import FatwaHeader from "@/components/FatwaHeader.vue"
+import HomePage from "@/components/HomePage.vue"
 export default {
   components : {
-    FatwaHeader
+    HomePage
   }
 }
 </script>

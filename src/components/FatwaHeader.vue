@@ -124,13 +124,26 @@
                 <div class="absolute inset-0 bg-indigo-700 mix-blend-multiply" />
               </div>
               <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-                <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                  <span class="block text-white">Excellence and Proficiency </span>
-                  <span class="block text-indigo-200">in the Sacred Sciences</span>
+                <h1 class="text-center text-4xl font-extrabold tracking-tight ">
+                  <span class="block text-white sm:text-5xl lg:text-6xl">Welcome to Itqan Institute </span>
+                  <span class="block text-indigo-200 sm:text-2xl lg:text-3xl mt-2">Excellence and Proficiency in the Sacred Sciences</span>
                 </h1>
                 <p class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
                   ‘Itqan’ means to do something excellently, proficiently and in the best way. Our vision at Itqan Institute is to contribute to a revival of the Islamic sacred sciences in a way that is authentic and grounded, with professionalism and good organisation.
                 </p>
+                <!-- search section -->
+                <div class="flex justify-center lg:justify-end mt-4">
+                  <div class="w-1/2 mx-auto px-2 lg:px-6">
+                    <label for="search" class="sr-only">Search Fatwas</label>
+                    <div class="relative text-indigo-200 focus-within:text-gray-400">
+                      
+                      <input id="search" name="search" class="block w-full pl-10 pr-3 py-3 border border-transparent rounded-md leading-5 bg-indigo-400 bg-opacity-25 text-indigo-100 placeholder-indigo-200 focus:outline-none focus:bg-white focus:ring-0 focus:placeholder-gray-400 focus:text-gray-900 sm:text-sm" placeholder="Search Fatwas" type="search" />
+                      <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                        <SearchIcon class="h-5 w-5" aria-hidden="true" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                   <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                     <a href="#" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">
@@ -146,39 +159,20 @@
           </div>
         </div>
 
-        <!-- Logo cloud -->
-        <div class="bg-gray-100">
-          <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
-              Trusted by over 5 very average small businesses
-            </p>
-            <div class="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-              <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" />
-              </div>
-              <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img class="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" />
-              </div>
-              <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img class="h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit" />
-              </div>
-              <div class="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
-                <img class="h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Transistor" />
-              </div>
-              <div class="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
-                <img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg" alt="Workcation" />
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
       <!-- More main page content here... -->
+    <latest-questions />
+    <newsletter-section />
+    
     </main>
   </div>
 </template>
 
 <script>
+import LatestQuestions from "@/components/LatestQuestions.vue"
+import NewsletterSection from "@/components/NewsletterSection.vue"
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
 import {
   AnnotationIcon,
@@ -188,7 +182,7 @@ import {
   QuestionMarkCircleIcon,
   XIcon,
 } from '@heroicons/vue/outline'
-import { ChevronDownIcon } from '@heroicons/vue/solid'
+import { ChevronDownIcon, SearchIcon } from '@heroicons/vue/solid'
 
 const solutions = [
   {
@@ -228,6 +222,9 @@ export default {
     ChevronDownIcon,
     MenuIcon,
     XIcon,
+    SearchIcon,
+    LatestQuestions,
+    NewsletterSection
   },
   setup() {
     return {
