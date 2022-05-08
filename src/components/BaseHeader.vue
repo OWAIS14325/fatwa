@@ -61,6 +61,10 @@
       </Popover>
 </template>
 <script>
+import {
+  MenuIcon,
+  XIcon,
+} from '@heroicons/vue/outline'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 const navigation = [
   { name: 'Home', href: '/' },
@@ -74,6 +78,8 @@ export default {
     Popover,
     PopoverButton,
     PopoverPanel,
+    MenuIcon,
+    XIcon
   },
     setup() {
         return {

@@ -178,7 +178,7 @@
               <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
                 OUR ONLINE COURSES
               </p>
-              <p class="mt-8 max-w-prose mx-auto text-xl text-gray-500 w-1/4">
+              <p class="mt-8 max-w-prose mx-auto text-xl text-gray-500 sm:w-1/4 w-full">
                 <button type="submit" class="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium hover:from-amber-600 hover:to-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900">View Courses</button>
               </p>
             </div>

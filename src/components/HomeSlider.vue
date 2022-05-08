@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hidden lg:block">
     <transition-group name="fade" tag="div">
       <div v-for="i in [currentIndex]" :key="i">
         <img class="w-full h-full" :src="currentImg" />
