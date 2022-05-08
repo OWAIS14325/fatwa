@@ -1,12 +1,20 @@
 <template>
-  <home-page />
+  <div class="bg-white">
+    <div class="relative overflow-hidden">
+      <base-header />
+      <router-view />
+      <base-footer />
+    </div>
+  </div>
 </template>
 
 <script>
-import HomePage from "@/components/HomePage.vue"
+import BaseHeader from './components/BaseHeader.vue'
+import BaseFooter from './components/BaseFooter.vue'
 export default {
   components : {
-    HomePage
+    BaseHeader,
+    BaseFooter
   }
 }
 </script>
