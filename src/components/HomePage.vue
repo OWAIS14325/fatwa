@@ -78,11 +78,11 @@
                   <a v-for="item in navigation" :key="item.name" :href="item.href" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">{{ item.name }}</a>
                 </div>
                 <div class="mt-6 px-5">
-                  <a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-medium hover:from-teal-600 hover:to-cyan-700">Start free trial</a>
+                  <a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium hover:from-amber-600 hover:to-orange-700">ASK A FATWA</a>
                 </div>
-                <div class="mt-6 px-5">
+                <!-- <div class="mt-6 px-5">
                   <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="#" class="text-gray-900 hover:underline">Login</a></p>
-                </div>
+                </div> -->
               </div>
             </div>
           </PopoverPanel>
@@ -92,7 +92,7 @@
         <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden bg-[url('../assets/banner_2.jpg')] bg-no-repeat bg-cover">
           <div class="mx-auto max-w-7xl lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-8">
-              <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+              <div class="mx-auto max-w-md px-4 pb-16 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                 <div class="lg:py-24">
                   <a href="#" class="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
                     <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-amber-500 to-orange-600 rounded-full">Read Fatwas</span>
@@ -133,7 +133,7 @@
         </div>
 
         <!-- Blog section -->
-        <div class="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
+        <div class="relative bg-gray-50 py-16 sm:py-24 lg:py-32 mt-0 md:mt-48 lg:mt-0">
           <div class="relative">
             <div class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
               <h2 class="text-base font-semibold tracking-wider text-amber-600 uppercase">Read</h2>
