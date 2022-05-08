@@ -79,7 +79,11 @@
                   <div class="mt-6 flex items-center">
                     <div class="flex-shrink-0">
                       <a :href="post.author.href">
-                        <img class="h-10 w-10 rounded-full" :src="post.author.imageUrl" :alt="post.author.name" />
+                        <!-- <img class="h-10 w-10 rounded-full" :src="post.author.imageUrl" :alt="post.author.name" />
+                         -->
+                          <svg class="h-10 w-10 rounded-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
                       </a>
                     </div>
                     <div class="ml-3">
@@ -309,7 +313,7 @@ const blogPosts = [
     datetime: '2020-02-12',
     category: { name: 'Case Study', href: '#' },
     imageUrl:
-      'https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+      require('../assets/Fatwas/Fatwa-Images_Medical-student-examining-female-patients.jpg'),
     preview:
       'We commend you for your desire to follow the path of Taqwa.',
     author: {

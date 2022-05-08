@@ -1,44 +1,48 @@
 <template>
-  <carousel :items-to-show="1.5">
-    <slide v-for="slide in slides" :key="slide">
-      <img :src="slide.image" class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto">
-      <div class="carousel__item" :style="`background : url('../assets/Slider1.jpg')`"></div>
-    </slide>
-
-    <template #addons>
-      <navigation />
-      <pagination />
-    </template>
-  </carousel>
+  <div>
+    <transition-group name="fade" tag="div">
+      <div v-for="i in [currentIndex]" :key="i">
+        <img class="w-full h-full" :src="currentImg" />
+      </div>
+    </transition-group>
+    <a class="prev" @click="prev" href="#">&#10094; Previous</a>
+    <a class="next" @click="next" href="#">&#10095; Next</a>
+  </div>
 </template>
 
 <script>
-// If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
-import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
-const slides = [
-    {
-        image : require('@/assets/Slider1.jpg')
-    },
-    {
-        image : require('@/assets/Slider2.jpg')
-    },
-    {
-        image : require('@/assets/Slider3.jpg')
-    }
-]
 export default {
-  name: 'App',
-  components: {
-    Carousel,
-    Slide,
-    Pagination,
-    Navigation,
+  name: "HomeSlider",
+  data() {
+    return {
+      images: [
+        require("../assets/Slider1.jpg"),
+        require("../assets/Slider2.jpg"),
+        require("../assets/Slider3.jpg"),
+      ],
+      timer: null,
+      currentIndex: 0
+    };
   },
-  setup(){
-      return{
-          slides
-      }
+
+
+  methods: {
+    startSlide: function() {
+      this.timer = setInterval(this.next, 5000);
+    },
+
+    next: function() {
+      this.currentIndex += 1;
+    },
+    prev: function() {
+      this.currentIndex -= 1;
+    }
+  },
+
+  computed: {
+    currentImg: function() {
+      return this.images[Math.abs(this.currentIndex) % this.images.length];
+    }
   }
 };
 </script>
