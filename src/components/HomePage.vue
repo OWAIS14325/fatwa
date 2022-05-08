@@ -1,30 +1,3 @@
-<!--
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  const colors = require('tailwindcss/colors')
-  
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        colors: {
-          teal: colors.teal,
-          cyan: colors.cyan,
-        },
-      },
-    },
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
--->
 <template>
   <div class="bg-white">
     <div class="relative overflow-hidden">
@@ -89,19 +62,18 @@
         </transition>
       </Popover>
       <main>
-        <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden bg-[url('../assets/banner_2.jpg')] bg-no-repeat bg-cover">
+        <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:overflow-hidden bg-[url('../assets/banner_2.jpg')] bg-no-repeat bg-cover">
           <div class="mx-auto max-w-7xl lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-8">
               <div class="mx-auto max-w-md px-4 pb-16 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
-                <div class="lg:py-24">
-                  <a href="#" class="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
+                <div class="lg:pt-20">
+                  <!-- <a href="#" class="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
                     <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-gradient-to-r from-amber-500 to-orange-600 rounded-full">Read Fatwas</span>
                     <span class="ml-4 text-sm">Visit our fatwa page</span>
                     <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
-                  </a>
+                  </a> -->
                   <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span class="block">Welcome to</span>
-                    <span class="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-orange-400 sm:pb-5">Itqan Institute</span>
+                    <span class="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-orange-400 sm:pb-5">Welcome to Itqan Institute</span>
                   </h1>
                   <p class="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
                     Excellence and Proficiency in the Sacred Sciences
@@ -126,6 +98,46 @@
                 <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                   <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
                   <!-- <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="../assets/banner.png" alt="" /> -->
+                  <!-- Slider Section -->
+                    <div id="default-carousel" class="relative" data-carousel="static">
+                        <!-- Carousel wrapper -->
+                        <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+                            <!-- Item 1 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
+                                <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                            </div>
+                        </div>
+                        <!-- Slider indicators -->
+                        <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                <span class="hidden">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                <span class="hidden">Next</span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <!-- Slider Section End -->
                 </div>
               </div>
             </div>
@@ -133,12 +145,11 @@
         </div>
 
         <!-- Blog section -->
-        <div class="relative bg-gray-50 py-16 sm:py-24 lg:py-32 mt-0 md:mt-48 lg:mt-0">
+        <div class="relative bg-gray-50 py-16 sm:py-24 lg:py-16 mt-0 md:mt-48 lg:mt-0">
           <div class="relative">
             <div class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-              <h2 class="text-base font-semibold tracking-wider text-amber-600 uppercase">Read</h2>
               <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                Latest Questions
+                Latest Fatwas
               </p>
             </div>
             <div class="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl">
@@ -181,7 +192,7 @@
                         <span aria-hidden="true">
                           &middot;
                         </span>
-                        <span> {{ post.readingLength }} read </span>
+                        <!-- <span> {{ post.readingLength }} read </span> -->
                       </div>
                     </div>
                   </div>
@@ -192,15 +203,11 @@
         </div>
 
         <!-- Feature section with grid -->
-        <div class="relative bg-white py-16 sm:py-24 lg:py-32">
+        <div class="relative bg-white py-16 sm:py-24 lg:py-16">
           <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-            <h2 class="text-base font-semibold tracking-wider text-amber-600 uppercase">READ BY CATEGORY</h2>
             <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-              Question Categories
+              Fatwa Categories
             </p>
-            <!-- <p class="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-              Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.
-            </p> -->
             <div class="mt-12">
               <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <div v-for="feature in features" :key="feature.name" class="pt-6">
@@ -224,7 +231,7 @@
         </div>
 
         <!-- Testimonial section -->
-        <div class="pb-16 bg-gradient-to-r from-amber-500 to-orange-600 lg:pb-0 lg:z-10 lg:relative">
+        <div class="pb-16 bg-gradient-to-r from-amber-400 to-orange-400 lg:pb-0 lg:z-10 lg:relative">
           <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
             <div class="relative lg:-my-8">
               <div aria-hidden="true" class="absolute inset-x-0 top-0 lg:h-1/2 bg-white lg:hidden" />
@@ -260,7 +267,7 @@
         <div class="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
           <div class="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
             <div>
-              <h2 class="text-base font-semibold tracking-wider text-amber-600 uppercase">WANT TO LEARN MORE ?</h2>
+             
               <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
                 OUR ONLINE COURSES
               </p>
@@ -273,9 +280,9 @@
         </div>
         <!-- CTA Section -->
         <div class="relative bg-gray-900">
-          <div class="relative h-56 bg-amber-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+          <div class="relative h-56 bg-amber-400 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
             <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100" alt="" />
-            <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-600 mix-blend-multiply" />
+            <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-400 mix-blend-multiply" />
           </div>
           <div class="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
             <div class="md:ml-auto md:w-1/2 md:pl-10">
