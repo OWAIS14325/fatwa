@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white">
-    <div class="relative overflow-hidden">
+    <div class="relative">
       <base-header />
       <router-view />
       <base-footer />

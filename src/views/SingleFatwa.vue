@@ -1,12 +1,12 @@
 <template>
     <!-- Main content -->
-      <div class="flex-1 flex items-stretch overflow-hidden">
+      <div class="flex-1 flex items-stretch">
         <main class="flex-1 overflow-y-auto">
           <!-- Primary column -->
           <section aria-labelledby="primary-heading" class="min-w-0 flex-1 h-full flex flex-col lg:order-last">
             <h1 id="primary-heading" class="sr-only">Photos</h1>
             <!-- Your content -->
-             <div class="relative py-16 bg-white overflow-hidden">
+             <div class="relative py-16 bg-white">
               <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
                 <div class="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
                   <svg class="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
@@ -53,68 +53,21 @@
         </main>
 
         <!-- Secondary column (hidden on smaller screens) -->
-        <aside class="hidden w-96 bg-white border-l border-gray-200 overflow-y-auto lg:block p-5">
+        <aside class="hidden w-96 bg-white border-l border-gray-200 lg:block p-5 h-screen sticky top-0">
           <!-- Your content -->
-          <div class="pb-3 border-b border-gray-200">
-            <h3 class="text-lg leading-6 font-medium text-gray-900">
-              Popular Fatwas
-            </h3>
-          </div>
-
-           <ul role="list" class="divide-y divide-gray-200">
-            <li v-for="person in people" :key="person.email" class="py-4 flex">
-              <img class="h-10 w-10 rounded-full" :src="person.image" alt="" />
-              <div class="ml-3">
-                <p class="text-sm font-medium text-gray-900">{{ person.name }}</p>
-                <p class="text-sm text-gray-500">{{ person.email }}</p>
-              </div>
-            </li>
-          </ul>
-
-          <button type="submit" class="block w-full mt-5 py-3 px-4 rounded-md shadow bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium hover:from-amber-600 hover:to-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900">ASK A FATWA</button>
-
+          <sidebar-content />
         </aside>
       </div>
 </template>
 <script>
-const people = [
-  {
-    name: 'Calvin Hawkins',
-    email: 'calvin.hawkins@example.com',
-    image:
-      'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    name: 'Kristen Ramos',
-    email: 'kristen.ramos@example.com',
-    image:
-      'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    name: 'Ted Fox',
-    email: 'ted.fox@example.com',
-    image:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    name: 'Kristen Ramos',
-    email: 'kristen.ramos@example.com',
-    image:
-      'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    name: 'Ted Fox',
-    email: 'ted.fox@example.com',
-    image:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-]
+import SidebarContent from '@/components/SidebarContent.vue'
+
 
 export default {
+  components: { SidebarContent },
  
   setup() {
     return {
-      people,
     }
   },
 }
