@@ -1,11 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from "@/views/HomePage.vue"
+import ContactPage from "@/views/ContactPage.vue"
+import FatwaList from "@/views/FatwaList.vue"
 
 const routes = [
   {
     path: '/',
     name: 'homepage',
     component: HomePage
+  },
+  {
+    path: '/contact-us',
+    name: 'ContactUs',
+    component: ContactPage
+  },
+  {
+    path: '/fatwas',
+    name: 'FatwaList',
+    component: FatwaList
   },
   {
     path: '/single-fatwa/',

@@ -46,7 +46,7 @@
                 <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
                   <p>As-salāmu ‘alaykum wa-rahmatullāhi wa-barakātuh.</p>
                 </div>
-                <iframe src="http://itqaninstitute.org/wp-content/uploads/2022/05/Fatwa1.pdf" width="100%" height="800px"></iframe>
+                <object data="http://itqaninstitute.org/wp-content/uploads/2022/05/Fatwa1.pdf" width="100%" height="800px" ></object>
               </div>
              </div>
           </section>

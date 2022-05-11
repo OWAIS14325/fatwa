@@ -69,9 +69,9 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About Us', href: '#' },
-  { name: 'Fatwa', href: '#' },
+  { name: 'Fatwas', href: 'fatwas' },
   { name: 'Publications', href: '#' },
-  { name: 'Contact Us', href: '#' },
+  { name: 'Contact Us', href: '/contact-us' },
 ]
 export default {
     components: {
