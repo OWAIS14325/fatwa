@@ -15,7 +15,7 @@
                 <div class="sm:col-span-2">
                   <div class="space-y-4">
                     <div class="text-lg leading-6 font-medium space-y-1">
-                      <h3><router-link to="/single-fatwa">{{ person.name }}</router-link></h3>
+                      <h3><a :href="person.pdfUrl">{{ person.name }}</a></h3>
                       <p class="text-indigo-600">{{ person.role }}</p>
                     </div>
                     <div class="text-lg">
@@ -23,7 +23,7 @@
                     </div>
                     <ul role="list" class="flex space-x-5">
                       <li>
-                        <router-link class="text-base text-amber-500" to="/single-fatwa">Read More</router-link>
+                        <a class="text-base text-amber-500" :href="person.pdfUrl">Read More</a>
                       </li>
                     </ul>
                   </div>
@@ -54,7 +54,7 @@ const fatwas = [
       require('@/assets/Fatwas/Fatwa-Images_Is-Erythritol-halal.jpg'),
     bio:
       'In the Name of Allah, the Most Gracious, the Most Merciful. Erythritol is a sugar alcohol produced in the industry through the fermentation of glucose that is derived from starch. The starch is extracted from corn/maize....',
-    twitterUrl: '#',
+    pdfUrl: 'http://itqaninstitute.org/wp-content/uploads/2022/05/1.pdf',
     linkedinUrl: '#',
   },
   {
@@ -64,7 +64,7 @@ const fatwas = [
       require('@/assets/Fatwas/Fatwa-Images_Should-we-add-Arabi.jpg'),
     bio:
       'In the Name of Allah, the Most Gracious, the Most Merciful. It is detestable (makruh) to add anything on a headstone other than what is required to recognise the grave, such as the name of the deceased and the date of death...',
-    twitterUrl: '#',
+    pdfUrl: 'http://itqaninstitute.org/wp-content/uploads/2022/05/2.pdf',
     linkedinUrl: '#',
   },
   {
@@ -74,7 +74,7 @@ const fatwas = [
       require('@/assets/Fatwas/Fatwa-Images_Is-a-person-who-died-through-cancer-a-Shahῑd.jpg'),
     bio:
       'In the Name of Allah, the Most Gracious, the Most Merciful. A person who passes away due to a cancer of any part of the body will, insha’Allah, be considered a Shahῑd...',
-    twitterUrl: '#',
+    pdfUrl: 'http://itqaninstitute.org/wp-content/uploads/2022/05/3.pdf',
     linkedinUrl: '#',
   },
   {
@@ -84,7 +84,7 @@ const fatwas = [
       require('@/assets/Fatwas/Fatwa-Images_Medical-student-examining-female-patients.jpg'),
     bio:
       'In the Name of Allah, the Most Gracious, the Most Merciful. We commend you for your desire to follow the path of Taqwa. Shari’ah has not permitted the viewing of the body of the opposite gender for a non-mahram man.1 Allah Ta’ala says:...',
-    twitterUrl: '#',
+    pdfUrl: 'http://itqaninstitute.org/wp-content/uploads/2022/05/4.pdf',
     linkedinUrl: '#',
   },
   {
@@ -94,7 +94,7 @@ const fatwas = [
       require('@/assets/Fatwas/Fatwa-Images_moustache-with-a-jack-razo.jpg'),
     bio:
       'In the Name of Allah, the Most Gracious, the Most Merciful. It is permissible to use the jack razor1 to shave off the moustache completely.2...',
-    twitterUrl: '#',
+    pdfUrl: 'http://itqaninstitute.org/wp-content/uploads/2022/05/5.pdf',
     linkedinUrl: '#',
   },
   {
@@ -104,7 +104,7 @@ const fatwas = [
       require('@/assets/Fatwas/Fatwa-Images_purchasing-items-on-an-Auction-Website.jpg'),
     bio:
       'In the Name of Allah, the Most Gracious, the Most Merciful. The query in reference is governed by the concept of Isteela’ – legal authority like in the case of a Government...',
-    twitterUrl: '#',
+    pdfUrl: 'http://itqaninstitute.org/wp-content/uploads/2022/05/6.pdf',
     linkedinUrl: '#',
   },
   {
@@ -114,7 +114,7 @@ const fatwas = [
       require('@/assets/Fatwas/Fatwa-Images_medicine-even-when-we-known-that-it-contains-haram-ingredient.jpg'),
     bio:
       'In the Name of Allah, the Most Gracious, the Most Merciful. The Prophet Ṣallallāhu ‘Alayhi Wasallam said: إِنَّ اللهَ لَمْ يَجْعَلْ شِفَاءَكُمْ فِيْ حَرَامٍ ..',
-    twitterUrl: '#',
+    pdfUrl: 'http://itqaninstitute.org/wp-content/uploads/2022/05/7.pdf',
     linkedinUrl: '#',
   },
   {
@@ -124,7 +124,7 @@ const fatwas = [
       require('@/assets/Fatwas/Fatwa-Images_I-found-20-Rands.jpg'),
     bio:
       'In the Name of Allah, the Most Gracious, the Most Merciful. Your attitude of seeking guidance on the issue in reference is an indication that you are on the straight path (Ṣirātul Mustaqῑm)...',
-    twitterUrl: '#',
+    pdfUrl:'http://itqaninstitute.org/wp-content/uploads/2022/05/8.pdf',
     linkedinUrl: '#',
   },
   {
@@ -134,7 +134,7 @@ const fatwas = [
       require('@/assets/Fatwas/Fatwa-Images_Seeking-blessings-through-the-relics.jpg'),
     bio:
       'In the Name of Allah, the Most Gracious, the Most Merciful. Different countries have different approaches to the relics of Rasulullah Ṣallallāhu ‘Alayhi Wasallam and the Sahabah...',
-    twitterUrl: '#',
+    pdfUrl: 'http://itqaninstitute.org/wp-content/uploads/2022/05/9.pdf',
     linkedinUrl: '#',
   },
   {
@@ -144,11 +144,10 @@ const fatwas = [
       require('@/assets/Fatwas/Fatwa-Images_Designer-BabiesMitochondrial-Replacement.jpg'),
     bio:
       'In the Name of Allah, the Most Gracious, the Most Merciful. You refer to two concepts in your query, ‘Designer Babies’ and ‘Mitochondrial Replacement’. Both are relatively new concepts1, thus requiring a proper understanding of the concepts before presenting the Islamic perspective on them...',
-    twitterUrl: '#',
+    pdfUrl: 'http://itqaninstitute.org/wp-content/uploads/2022/05/10.pdf',
     linkedinUrl: '#',
   },
 
-  // More people...
 ]
 export default {
  

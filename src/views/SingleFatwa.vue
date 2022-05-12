@@ -38,15 +38,26 @@
               <div class="relative px-4 sm:px-6 lg:px-8">
                 <div class="text-lg  mx-auto">
                   <h1>
-                    <span class="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">Question</span>
-                    <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Assalamualaikum, I would really like your help. Can you please tell me if Erythritol is halal? Its some sort of sugar alcohol derived from plants according to my research. JazakAllah for your time and efforts, may Allah bless you.</span>
+                    <span class="block text-3xl text-left text-amber-600 font-semibold tracking-wide uppercase">Question</span>
+                    <span class="mt-2 block text-2xl text-left leading-8 font-semibold tracking-tight text-gray-900 sm:text-2xl">Assalamualaikum, I would really like your help. Can you please tell me if Erythritol is halal? Its some sort of sugar alcohol derived from plants according to my research. JazakAllah for your time and efforts, may Allah bless you.</span>
                   </h1>
-                  <p class="mt-8 text-xl text-gray-500 leading-8">In the Name of <strong>Allah</strong>, the Most Gracious, the Most Merciful.</p>
+
+                  <span class="block mt-5 text-3xl text-left text-green-600 font-semibold tracking-wide uppercase">Answer</span>
+                  
                 </div>
-                <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+                <div class="mt-6  mx-auto">
+                  <p class="mt-8 text-xl font-semibold text-gray-500 leading-8">In the Name of <strong>Allah</strong>, the Most Gracious, the Most Merciful.</p>
                   <p>As-salāmu ‘alaykum wa-rahmatullāhi wa-barakātuh.</p>
+                  <p>
+                    Erythritol is a sugar alcohol produced in the industry through the fermentation of glucose that is derived from starch. The starch is extracted from corn/maize.1
+                  </p>
+                  <h3>Erythritol is made by:</h3>
+                  <ul>
+                    <li>First extracting starch from corn/maize</li>
+                    <li>First extracting starch from corn/maize</li>
+                  </ul>
                 </div>
-                <object data="http://itqaninstitute.org/wp-content/uploads/2022/05/Fatwa1.pdf" width="100%" height="800px" ></object>
+               
               </div>
              </div>
           </section>
