@@ -15,7 +15,7 @@
                 <div class="sm:col-span-2">
                   <div class="space-y-4">
                     <div class="text-lg leading-6 font-medium space-y-1">
-                      <h3><a :href="person.pdfUrl">{{ person.name }}</a></h3>
+                      <h3><router-link to="/single-fatwa">{{ person.name }}</router-link></h3>
                       <p class="text-indigo-600">{{ person.role }}</p>
                     </div>
                     <div class="text-lg">
@@ -23,7 +23,7 @@
                     </div>
                     <ul role="list" class="flex space-x-5">
                       <li>
-                        <a class="text-base text-amber-500" :href="person.pdfUrl">Read More</a>
+                        <router-link class="text-base text-amber-500" to="/single-fatwa">Read More</router-link>
                       </li>
                     </ul>
                   </div>

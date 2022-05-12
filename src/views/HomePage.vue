@@ -1,7 +1,7 @@
 <template>
   
       
-      <main>
+      <main class="overflow-hidden">
         <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:overflow-hidden bg-[url('../assets/banner_2.jpg')] bg-no-repeat bg-cover">
           <div class="mx-auto max-w-7xl lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-8">
@@ -69,7 +69,8 @@
                     </p>
                     <a :href="post.href" class="block mt-2">
                       <p class="text-xl font-semibold text-gray-900">
-                       <a :href="post.author.href"> {{ post.title }} </a></p>
+                       <router-link to="/single-fatwa"> {{ post.title }} </router-link>
+                      </p>
                       <p class="mt-3 text-base text-gray-500">
                         {{ post.preview }}
                       </p>
@@ -204,7 +205,7 @@
               <div class="mt-8">
                 <div class="inline-flex rounded-md shadow">
                   <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
-                    Donate Now
+                    Visit the help center
                     <ExternalLinkIcon class="-mr-1 ml-3 h-5 w-5 text-gray-400" aria-hidden="true" />
                   </a>
                 </div>
@@ -281,7 +282,7 @@ const blogPosts = [
       name: 'Muadh Chati',
       imageUrl:
         'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      href: 'http://itqaninstitute.org/wp-content/uploads/2022/05/2.pdf',
+      href: '#',
     },
     readingLength: '6 min',
   },
@@ -300,7 +301,7 @@ const blogPosts = [
       name: 'Muadh Chati',
       imageUrl:
         'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      href: 'http://itqaninstitute.org/wp-content/uploads/2022/05/3.pdf',
+      href: '#',
     },
     readingLength: '4 min',
   },
@@ -319,7 +320,7 @@ const blogPosts = [
       name: 'Muadh Chati',
       imageUrl:
         'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      href: 'http://itqaninstitute.org/wp-content/uploads/2022/05/4.pdf',
+      href: '#',
     },
     readingLength: '11 min',
   },
