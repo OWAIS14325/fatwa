@@ -1,5 +1,5 @@
 <template>
-  <carousel class="mt-8" :items-to-show="1" :autoplay="2500" snapAlign="center" :wrapAround="true">
+  <carousel class="mt-0 md:mt-8" :items-to-show="1" :autoplay="2500" snapAlign="center" :wrapAround="true">
     <slide v-for="slide in slides" :key="slide">
       <img :src="slide" />
     </slide>

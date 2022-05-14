@@ -34,11 +34,9 @@
                   </div>
                 </div>
               </div>
-              <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
+              <div class="mt-0 mb-0 md:mt-12 md:-mb-48 lg:m-0 lg:relative">
                 <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-                  <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
-                  <!-- <img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="../assets/banner.png" alt="" /> -->
-                  <!-- Slider Section -->
+                 <!-- Slider Section -->
                   <home-slider />
                     <!-- Slider Section End -->
                 </div>
