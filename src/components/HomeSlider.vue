@@ -1,48 +1,60 @@
 <template>
-  <div class="hidden lg:block">
-    <transition-group name="fade" tag="div">
-      <div v-for="i in [currentIndex]" :key="i">
-        <img class="w-full h-full" :src="currentImg" />
-      </div>
-    </transition-group>
-    <a class="prev" @click="prev" href="#">&#10094; Previous</a>
-    <a class="next" @click="next" href="#">&#10095; Next</a>
-  </div>
+  <carousel class="mt-8" :items-to-show="1" :autoplay="2500" snapAlign="center" :wrapAround="true">
+    <slide v-for="slide in slides" :key="slide">
+      <img :src="slide" />
+    </slide>
+
+    <template #addons>
+      <navigation />
+      <pagination />
+    </template>
+  </carousel>
 </template>
 
 <script>
+// If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
+import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+
 export default {
-  name: "HomeSlider",
-  data() {
-    return {
-      images: [
-        require("../assets/Slider1.jpg"),
-        require("../assets/Slider2.jpg"),
-        require("../assets/Slider3.jpg"),
-      ],
-      timer: null,
-      currentIndex: 0
-    };
+  name: 'App',
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
   },
-
-
-  methods: {
-    startSlide: function() {
-      this.timer = setInterval(this.next, 5000);
-    },
-
-    next: function() {
-      this.currentIndex += 1;
-    },
-    prev: function() {
-      this.currentIndex -= 1;
-    }
-  },
-
-  computed: {
-    currentImg: function() {
-      return this.images[Math.abs(this.currentIndex) % this.images.length];
-    }
+  data(){
+      return {
+          slides : [
+              require("@/assets/Slider1.jpg"),
+              require("@/assets/Slider2.jpg"),
+              require("@/assets/Slider3.jpg")
+          ]
+      }
   }
 };
 </script>
+<style>
+.carousel__item {
+  min-height: 200px;
+  width: 100%;
+  background-color: var(--vc-clr-primary);
+  color:  var(--vc-clr-white);
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__slide {
+  padding: 10px;
+}
+
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+  border: 2px solid white;
+}
+</style>
