@@ -4,8 +4,8 @@
       <div class="bg-warm-gray-50">
         <div class="py-24 lg:py-32">
           <div class="relative z-10 max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-extrabold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">Get in touch</h1>
-            <p class="mt-6 text-xl text-warm-gray-500 max-w-3xl">Vel nunc non ut montes, viverra tempor. Proin lectus nibh phasellus morbi non morbi. In elementum urna ut volutpat. Sagittis et vel et fermentum amet consequat.</p>
+            <h1 class="text-4xl font-extrabold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">Ask a Fatwa</h1>
+            <!-- <p class="mt-6 text-xl text-warm-gray-500 max-w-3xl">Vel nunc non ut montes, viverra tempor. Proin lectus nibh phasellus morbi non morbi. In elementum urna ut volutpat. Sagittis et vel et fermentum amet consequat.</p> -->
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="relative bg-white shadow-xl">
-            <h2 id="contact-heading" class="sr-only">Contact us</h2>
+            <h2 id="contact-heading" class="sr-only">Ask a Fatwa </h2>
 
             <div class="grid grid-cols-1 lg:grid-cols-3">
               <!-- Contact information -->
@@ -65,8 +65,7 @@
                     </defs>
                   </svg>
                 </div>
-                <h3 class="text-lg font-medium text-white">Contact information</h3>
-                <p class="mt-6 text-base text-amber-50 max-w-3xl">Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.</p>
+                <h3 class="text-lg font-medium text-white">Get In Touch</h3>
                 <dl class="mt-8 space-y-6">
                   <dt><span class="sr-only">Phone number</span></dt>
                   <dd class="flex text-base text-amber-50">
@@ -109,24 +108,24 @@
 
               <!-- Contact form -->
               <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-                <h3 class="text-lg font-medium text-warm-gray-900">Send us a message</h3>
+                <h3 class="text-lg font-medium text-warm-gray-900">Fill the Details</h3>
                 <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                   <div>
                     <label for="first-name" class="block text-sm font-medium text-warm-gray-900">First name</label>
                     <div class="mt-1">
-                      <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-300 rounded-md" />
+                      <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-md text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-500 rounded-md" />
                     </div>
                   </div>
                   <div>
                     <label for="last-name" class="block text-sm font-medium text-warm-gray-900">Last name</label>
                     <div class="mt-1">
-                      <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-300 rounded-md" />
+                      <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="py-3 px-4 block w-full shadow-md text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-500 rounded-md" />
                     </div>
                   </div>
                   <div>
                     <label for="email" class="block text-sm font-medium text-warm-gray-900">Email</label>
                     <div class="mt-1">
-                      <input id="email" name="email" type="email" autocomplete="email" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-300 rounded-md" />
+                      <input id="email" name="email" type="email" autocomplete="email" class="py-3 px-4 block w-full shadow-md text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-500 rounded-md" />
                     </div>
                   </div>
                   <div>
@@ -135,22 +134,22 @@
                       <span id="phone-optional" class="text-sm text-warm-gray-500">Optional</span>
                     </div>
                     <div class="mt-1">
-                      <input type="text" name="phone" id="phone" autocomplete="tel" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-300 rounded-md" aria-describedby="phone-optional" />
+                      <input type="text" name="phone" id="phone" autocomplete="tel" class="py-3 px-4 block w-full shadow-md text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-500 rounded-md" aria-describedby="phone-optional" />
                     </div>
                   </div>
-                  <div class="sm:col-span-2">
-                    <label for="subject" class="block text-sm font-medium text-warm-gray-900">Subject</label>
+                  <!-- <div class="sm:col-span-2">
+                    <label for="subject" class="block text-sm font-medium text-warm-gray-900">Fatwa Cate</label>
                     <div class="mt-1">
-                      <input type="text" name="subject" id="subject" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-300 rounded-md" />
+                      <input type="text" name="subject" id="subject" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-500 rounded-md" />
                     </div>
-                  </div>
+                  </div> -->
                   <div class="sm:col-span-2">
                     <div class="flex justify-between">
-                      <label for="message" class="block text-sm font-medium text-warm-gray-900">Message</label>
+                      <label for="message" class="block text-sm font-medium text-warm-gray-900">Fatwa Question</label>
                       <span id="message-max" class="text-sm text-warm-gray-500">Max. 500 characters</span>
                     </div>
                     <div class="mt-1">
-                      <textarea id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border border-warm-gray-300 rounded-md" aria-describedby="message-max" />
+                      <textarea id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border border-warm-gray-500 rounded-md" aria-describedby="message-max" required />
                     </div>
                   </div>
                   <div class="sm:col-span-2 sm:flex sm:justify-end">
