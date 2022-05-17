@@ -4,11 +4,9 @@
             Follow Us On Twitter
         </h3>
     </div>
-    <ul>
-        <li>Tweets...</li>
-        <li>Tweets...</li>
-        <li>Tweets...</li>
-    </ul>
+    <div>
+      <TwitterWidget />
+    </div>
     <div class="pb-3 border-b border-gray-200 mt-5">
         <h3 class="text-lg leading-6 font-medium text-gray-900">
             Fatwa Categories
@@ -26,6 +24,7 @@
     <button type="submit" class="block w-full mt-5 py-3 px-4 rounded-md shadow bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium hover:from-amber-600 hover:to-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900">ASK A FATWA</button>
 </template>
 <script>
+import TwitterWidget from './TwitterWidget.vue'
 const fatwaCategories = [
   {
     name: 'ZAKAAH (ALMS) - (300)',
@@ -138,11 +137,11 @@ const fatwaCategories = [
 ]
 
 export default {
- 
-  setup() {
-    return {
-      fatwaCategories
-    }
-  },
+    setup() {
+        return {
+            fatwaCategories
+        };
+    },
+    components: { TwitterWidget }
 }
 </script>
