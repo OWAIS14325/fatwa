@@ -1,4 +1,3 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
 <template>
   <!-- Main content -->
   <div class="flex-1 flex items-stretch">
@@ -11,7 +10,7 @@
         <h1 id="primary-heading" class="sr-only">Photos</h1>
         <!-- Your content -->
         <div class="relative p-16 bg-white">
-          <img class="w-full h-72" src="@/assets/Fatwas/Fatwa-Images_Designer-BabiesMitochondrial-Replacement.jpg" alt="" srcset="">
+          <img class="w-full object-cover h-72" src="@/assets/Fatwas/Fatwa-Images_Designer-BabiesMitochondrial-Replacement.jpg" alt="" srcset="">
           <h3>Question:</h3>
           <strong>Assalamualaikum,</strong>
           I would really like your help. Can you please tell me if Erythritol is
