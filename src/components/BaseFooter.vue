@@ -6,7 +6,7 @@
             <div class="space-y-8 xl:col-span-1">
               <img class="h-10" src="../assets/Weblogo.png" alt="Itqan Institute" />
               <p class="text-gray-500 text-base">
-                ‘Itqan’ means to do something excellently, proficiently and in the best way.
+                Excellence & Proficiency in the Sacred Sciences
               </p>
               <div class="flex space-x-6">
                 <a v-for="item in footerNavigation.social" :key="item.name" :href="item.href" class="text-gray-400 hover:text-gray-500">
