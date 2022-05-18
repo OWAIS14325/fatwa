@@ -198,7 +198,8 @@
                 Itqan Institute
               </p>
               <p class="mt-3 text-lg text-gray-300">
-                We are an on-site institute based in Blackburn, UK. We currently provide an on-site Takhassus fi'l Hadith programme and Takhassus fi'l Aqeedah programme. We also provide courses on various branches of the sacred sciences in an online capacity.
+               Here you can find the online branch of our institute, which covers a variety of topics for 'Alimiyyah graduates and students of the Islamic sciences.
+These are seperate to our main on-site activities in Blackburn, UK: Takhassus fi 'Uloom al-Hadith (2 years) and Takmilah fi 'Ilm al-Aqeedah (1 year).
               </p>
               <div class="mt-8">
                 <div class="inline-flex rounded-md shadow">
