@@ -13,10 +13,10 @@
                     <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
                   </a> -->
                   <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span class="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-orange-400 sm:pb-5">Welcome to Itqan Institute</span>
+                    <span class="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-orange-400 sm:pb-5">Welcome to Itqan Institute Fatwa Site</span>
                   </h1>
                   <p class="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
-                    Excellence and Proficiency in the Sacred Sciences
+                    Research-based Fatawa only
                   </p>
                   <div class="mt-10 sm:mt-12">
                     <form action="#" class="sm:max-w-xl sm:mx-auto lg:mx-0">
@@ -192,18 +192,18 @@
           <div class="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
             <div class="md:ml-auto md:w-1/2 md:pl-10">
               <h2 class="text-base font-semibold uppercase tracking-wider text-gray-300">
-                Award winning support
+                We have both online and on-site courses
               </h2>
               <p class="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
-                We’re here to help
+                Itqan Institute
               </p>
               <p class="mt-3 text-lg text-gray-300">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis.
+                We are an on-site institute based in Blackburn, UK. We currently provide an on-site Takhassus fi'l Hadith programme and Takhassus fi'l Aqeedah programme. We also provide courses on various branches of the sacred sciences in an online capacity.
               </p>
               <div class="mt-8">
                 <div class="inline-flex rounded-md shadow">
-                  <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
-                    Visit the help center
+                  <a href="https://itqaninstitute.org" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
+                    Visit our Site
                     <ExternalLinkIcon class="-mr-1 ml-3 h-5 w-5 text-gray-400" aria-hidden="true" />
                   </a>
                 </div>

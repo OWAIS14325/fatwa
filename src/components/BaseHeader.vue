@@ -49,7 +49,7 @@
                   <router-link v-for="item in navigation" :key="item.name" :to="item.href" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">{{ item.name }}</router-link>
                 </div>
                 <div class="mt-6 px-5">
-                  <a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium hover:from-amber-600 hover:to-orange-700">ASK A FATWA</a>
+                  <router-link to="ask-fatwa" class="block text-center w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium hover:from-amber-600 hover:to-orange-700">ASK A FATWA</router-link>
                 </div>
                 <!-- <div class="mt-6 px-5">
                   <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="#" class="text-gray-900 hover:underline">Login</a></p>
