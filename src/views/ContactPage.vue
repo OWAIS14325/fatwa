@@ -74,23 +74,23 @@
               <!-- Contact form -->
               <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
                 <h3 class="text-lg font-medium text-warm-gray-900">Fill the Details</h3>
-                <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                <form @submit.prevent="onSubmit" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                   <div>
                     <label for="first-name" class="block text-sm font-medium text-warm-gray-900">First name</label>
                     <div class="mt-1">
-                      <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-md text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-500 rounded-md" />
+                      <input type="text" name="first-name" v-model="form.firstName" id="first-name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-md text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-500 rounded-md" />
                     </div>
                   </div>
                   <div>
                     <label for="last-name" class="block text-sm font-medium text-warm-gray-900">Last name</label>
                     <div class="mt-1">
-                      <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="py-3 px-4 block w-full shadow-md text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-500 rounded-md" />
+                      <input type="text" name="last-name" id="last-name" v-model="form.lastName" autocomplete="family-name" class="py-3 px-4 block w-full shadow-md text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-500 rounded-md" />
                     </div>
                   </div>
                   <div>
                     <label for="email" class="block text-sm font-medium text-warm-gray-900">Email</label>
                     <div class="mt-1">
-                      <input id="email" name="email" type="email" autocomplete="email" class="py-3 px-4 block w-full shadow-md text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-500 rounded-md" />
+                      <input id="email" name="email" type="email" v-model="form.email" autocomplete="email" class="py-3 px-4 block w-full shadow-md text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-500 rounded-md" />
                     </div>
                   </div>
                   <div>
@@ -99,7 +99,7 @@
                       <span id="phone-optional" class="text-sm text-warm-gray-500">Optional</span>
                     </div>
                     <div class="mt-1">
-                      <input type="text" name="phone" id="phone" autocomplete="tel" class="py-3 px-4 block w-full shadow-md text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-500 rounded-md" aria-describedby="phone-optional" />
+                      <input type="text" name="phone" id="phone" v-model="form.Phone" autocomplete="tel" class="py-3 px-4 block w-full shadow-md text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border-warm-gray-500 rounded-md" aria-describedby="phone-optional" />
                     </div>
                   </div>
                   <!-- <div class="sm:col-span-2">
@@ -114,7 +114,7 @@
                       <span id="message-max" class="text-sm text-warm-gray-500">Max. 500 characters</span>
                     </div>
                     <div class="mt-1">
-                      <textarea id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border border-warm-gray-500 rounded-md" aria-describedby="message-max" required />
+                      <textarea id="message" name="message" rows="4" v-model="form.question" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-amber-500 focus:border-amber-500 border border-warm-gray-500 rounded-md" aria-describedby="message-max" required />
                     </div>
                   </div>
                   <div class="sm:col-span-2 sm:flex sm:justify-end">
@@ -133,7 +133,32 @@
 </template>
 <script>
 import TwitterWidget from '@/components/TwitterWidget.vue'
+import { createQuestion } from '@/firebase/firebase'
+import { reactive } from 'vue'
+import { createToast } from 'mosha-vue-toastify';
+import 'mosha-vue-toastify/dist/style.css'
 export default {
+  setup() {
+    const form = reactive({ 
+      firstName: '', 
+      lastName: '' ,
+      Phone : '',
+      question : '',
+      email : '',
+      date : Date.now()
+
+      })
+    const onSubmit = async () => {
+      await createQuestion({ ...form })
+      form.firstName = ''
+      form.email = ''
+      form.lastName = '',
+      form.Phone = '',
+      form.question = ''
+      createToast('Your Question was submitted successfully. you will get notified.', {type : 'success'})
+    }
+    return { form, onSubmit }
+  },
      components: {
     TwitterWidget
   },
