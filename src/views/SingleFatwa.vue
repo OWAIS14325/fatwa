@@ -1,4 +1,5 @@
 <template>
+<BaseHeader />
   <!-- Main content -->
   <div class="flex-1 flex items-stretch">
     <main class="flex-1 overflow-y-auto">
@@ -261,12 +262,14 @@
       <sidebar-content />
     </aside>
   </div>
+<BaseFooter />
 </template>
 <script>
 import SidebarContent from "@/components/SidebarContent.vue";
+import BaseHeader from "@/components/BaseHeader.vue";
 
 export default {
-  components: { SidebarContent },
+  components: { SidebarContent, BaseHeader },
 
   setup() {
     return {};

@@ -1,4 +1,5 @@
 <template>
+    <BaseHeader />
     <!-- Main content -->
       <div class="flex-1 flex items-stretch ">
         <main class="flex-1 overflow-y-auto">
@@ -42,10 +43,12 @@
 
         </aside>
       </div>
+    <BaseFooter />
 </template>
 <script>
 import SidebarContent from "@/components/SidebarContent.vue"
 import FatwaPagination from "@/components/FatwaPagination.vue"
+import BaseHeader from "@/components/BaseHeader.vue"
 const fatwas = [
   {
     name: 'Assalamualaikum,I would really like your help. Can you please tell me if Erythritol is halal?...',
@@ -161,8 +164,9 @@ export default {
       console.log(this.$route.name);
   },
   components : {
-      SidebarContent,
-      FatwaPagination
-  }
+    SidebarContent,
+    FatwaPagination,
+    BaseHeader
+}
 }
 </script>

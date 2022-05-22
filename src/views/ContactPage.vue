@@ -1,4 +1,5 @@
 <template>
+<BaseHeader />
 <main class="overflow-hidden">
       <!-- Header -->
       <div class="bg-warm-gray-50">
@@ -128,15 +129,18 @@
           </div>
         </div>
       </section>
-    </main>
+</main>
+<BaseFooter />
 
 </template>
 <script>
 import TwitterWidget from '@/components/TwitterWidget.vue'
-import { createQuestion } from '@/firebase/firebase'
 import { reactive } from 'vue'
 import { createToast } from 'mosha-vue-toastify';
 import 'mosha-vue-toastify/dist/style.css'
+import BaseHeader from '@/components/BaseHeader.vue';
+import BaseFooter from '@/components/BaseFooter.vue';
+import { createQuestion } from '@/firebase/firebase';
 export default {
   setup() {
     const form = reactive({ 
@@ -150,6 +154,7 @@ export default {
       })
     const onSubmit = async () => {
       await createQuestion({ ...form })
+      
       form.firstName = ''
       form.email = ''
       form.lastName = '',
@@ -160,7 +165,9 @@ export default {
     return { form, onSubmit }
   },
      components: {
-    TwitterWidget
-  },
+    TwitterWidget,
+    BaseHeader,
+    BaseFooter
+},
 }
 </script>

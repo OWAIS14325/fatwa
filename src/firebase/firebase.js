@@ -29,9 +29,9 @@ export const createQuestion = que => {
 //   return usersCollection.doc(id).update(user)
 // }
 
-// export const deleteUser = id => {
-//   return usersCollection.doc(id).delete()
-// }
+export const deleteQuestion = id => {
+  return questionsCollection.doc(id).delete()
+}
 
 // export const useLoadUsers = () => {
 //   const users = ref([])
@@ -41,3 +41,15 @@ export const createQuestion = que => {
 //   onUnmounted(close)
 //   return users
 // }
+
+export const getAllQuestions = async () => {
+    const questions = [];
+    await db.collection("questions").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            // console.log(doc.id, " => ", doc.data());
+            questions.push({id:doc.id , data : doc.data()})
+        });
+    });
+   return questions.length ? questions : null
+}

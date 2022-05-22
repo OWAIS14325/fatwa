@@ -1,6 +1,6 @@
 <template>
   
-      
+      <BaseHeader />
       <main class="overflow-hidden">
         <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:overflow-hidden bg-[url('../assets/banner_2.jpg')] bg-no-repeat bg-cover">
           <div class="mx-auto max-w-7xl lg:px-8">
@@ -213,7 +213,7 @@ These are seperate to our main on-site activities in Blackburn, UK: Takhassus fi
           </div>
         </div>
       </main>
-      
+      <BaseFooter />
    
 </template>
 
@@ -231,6 +231,8 @@ import {
 } from '@heroicons/vue/outline'
 import { ChevronRightIcon, ExternalLinkIcon } from '@heroicons/vue/solid'
 import HomeSlider from "@/components/HomeSlider.vue"
+import BaseHeader from '@/components/BaseHeader.vue'
+import BaseFooter from '@/components/BaseFooter.vue'
 
 
 const features = [
@@ -332,8 +334,10 @@ export default {
     ExternalLinkIcon,
     MenuIcon,
     XIcon,
-    HomeSlider
-  },
+    HomeSlider,
+    BaseHeader,
+    BaseFooter
+},
   setup() {
     return {
       features,
