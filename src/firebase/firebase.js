@@ -15,11 +15,15 @@ const firebaseApp = firebase.initializeApp(config)
 
 const db = firebaseApp.firestore()
 const questionsCollection = db.collection('questions')
+const fatwaCollection = db.collection('fatwas')
 
 export const createQuestion = que => {
   return questionsCollection.add(que)
 }
 
+export const createFatwa = fatwa => {
+  return fatwaCollection.add(fatwa)
+}
 // export const getUser = async id => {
 //   const user = await usersCollection.doc(id).get()
 //   return user.exists ? user.data() : null
