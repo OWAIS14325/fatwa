@@ -4,6 +4,7 @@ import AskFatwa from "@/views/ContactPage.vue"
 import FatwaList from "@/views/FatwaList.vue"
 import DashboardHome from "@/components/dashboard/DashboardHome.vue"
 import FatwaQuestions from "@/components/dashboard/FatwaQuestions.vue"
+import AnswerFatwa from "@/components/dashboard/AnswerFatwa.vue"
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
         path : '/dashboard/questions',
         name : 'Fatwa Questions',
         component : FatwaQuestions
+      },
+      {
+        path : '/dashboard/answer/:id',
+        name : 'Answer Fatwa',
+        component : AnswerFatwa
       }
     ]
   },

@@ -135,15 +135,16 @@
 </template>
 <script>
 import TwitterWidget from '@/components/TwitterWidget.vue'
-import { reactive } from 'vue'
 import { createToast } from 'mosha-vue-toastify';
 import 'mosha-vue-toastify/dist/style.css'
 import BaseHeader from '@/components/BaseHeader.vue';
 import BaseFooter from '@/components/BaseFooter.vue';
 import { createQuestion } from '@/firebase/firebase';
 export default {
-  setup() {
-    const form = reactive({ 
+  
+  data(){
+    return{
+      form : { 
       firstName: '', 
       lastName: '' ,
       Phone : '',
@@ -151,23 +152,41 @@ export default {
       email : '',
       date : Date.now()
 
-      })
-    const onSubmit = async () => {
-      await createQuestion({ ...form })
-      
-      form.firstName = ''
-      form.email = ''
-      form.lastName = '',
-      form.Phone = '',
-      form.question = ''
-      createToast('Your Question was submitted successfully. you will get notified.', {type : 'success'})
+      }
     }
-    return { form, onSubmit }
   },
-     components: {
+  components: {
     TwitterWidget,
     BaseHeader,
     BaseFooter
-},
+  },
+  computed : {
+    questions(){
+      return this.$store.getters['getAllQuestions']
+    }
+  },
+  created(){
+     console.log(this.questions);
+  },
+  methods : {
+  async onSubmit (){
+      const today = Date.now() ;
+      const date = new Date(today).toLocaleDateString() 
+     
+      const res = this.questions.filter(que => que.data.email === this.form.email && new Date(que.data.date).toLocaleDateString() === date ) ;
+      if(!res.length){
+        await createQuestion({ ...this.form })
+      this.form.firstName = ''
+      this.form.email = ''
+      this.form.lastName = '',
+      this.form.Phone = '',
+      this.form.question = ''
+      createToast('Your Question was submitted successfully. you will get notified.', {type : 'success'})
+    }else {
+      createToast('Your Have Crossed Daily Limit of 1 question.', {type : 'danger'})
+    }
+      }
+      
+}
 }
 </script>

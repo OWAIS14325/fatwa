@@ -55,7 +55,7 @@
                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <button class="text-red-600 hover:text-red-900" @click="deleteQuestion(ques.id)">Delete</button>
                   <span class="mx-2">|</span>
-                  <a href="#" class="text-green-600 hover:text-green-900">Answer</a>
+                  <router-link :to="`/dashboard/answer/${ques.id}`" class="text-green-600 hover:text-green-900">Answer</router-link>
                 </td>
               </tr>
             </tbody>
@@ -79,10 +79,6 @@ export default {
       questions(){
           return this.$store.getters['getAllQuestions']
       }
-  },
-  async created(){
-    this.$store.dispatch('fetchQuestions')
-    
   },
   methods :{
       deleteQuestion(id){
