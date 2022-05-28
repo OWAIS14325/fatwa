@@ -54,29 +54,29 @@
               </p>
             </div>
             <div class="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl">
-              <div v-for="post in blogPosts" :key="post.id" class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div v-for="post in fatwaList" :key="post.id" class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                 <div class="flex-shrink-0">
-                  <img class="h-48 w-full object-cover" :src="post.imageUrl" alt="" />
+                  <img class="h-48 w-full object-cover" :src="post.data.fatwaImage" alt="" />
                 </div>
                 <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                   <div class="flex-1">
                     <p class="text-sm font-medium text-amber-600">
-                      <a :href="post.category.href" class="hover:underline">
-                        {{ post.category.name }}
-                      </a>
+                      <router-link :to="`/single-fatwa/${post.id}`" class="hover:underline">
+                        {{ post.data.fatwaCategory }}
+                      </router-link>
                     </p>
-                    <a :href="post.href" class="block mt-2">
+                    <a href="" class="block mt-2">
                       <p class="text-xl font-semibold text-gray-900">
-                       <router-link to="/single-fatwa"> {{ post.title }} </router-link>
+                       <router-link :to="`/single-fatwa/${post.id}`"> {{ post.data.question}} </router-link>
                       </p>
-                      <p class="mt-3 text-base text-gray-500">
-                        {{ post.preview }}
+                      <p class="mt-3 text-base text-gray-500" >
+                        {{ post.data.shortDesc }}
                       </p>
                     </a>
                   </div>
                   <div class="mt-6 flex items-center">
                     <div class="flex-shrink-0">
-                      <a :href="post.author.href">
+                      <a href="">
                         <!-- <img class="h-10 w-10 rounded-full" :src="post.author.imageUrl" :alt="post.author.name" />
                          -->
                           <svg class="h-10 w-10 rounded-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
@@ -86,13 +86,13 @@
                     </div>
                     <div class="ml-3">
                       <p class="text-sm font-medium text-gray-900">
-                        <a :href="post.author.href" class="hover:underline">
-                          {{ post.author.name }}
+                        <a href="" class="hover:underline">
+                          {{ post.data.author }}
                         </a>
                       </p>
                       <div class="flex space-x-1 text-sm text-gray-500">
-                        <time :datetime="post.datetime">
-                          {{ post.date }}
+                        <time :datetime="post.data.date">
+                          {{  new Date(post.data.date).toLocaleDateString() }}
                         </time>
                         <span aria-hidden="true">
                           &middot;
@@ -344,5 +344,16 @@ export default {
       blogPosts,
     }
   },
+  computed : {
+    fatwaList(){
+      const res = this.$store.getters['getAllFatwas']
+      console.log(res);
+      return res.filter((item, index) => index < 4)
+    }
+  },
+  async created(){
+    await this.$store.dispatch('fetchFatwas')
+    console.log(this.fatwaList);
+  }
 }
 </script>

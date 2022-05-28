@@ -44,7 +44,17 @@ const routes = [
         path : '/dashboard/answer/:id',
         name : 'Answer Fatwa',
         component : AnswerFatwa
-      }
+      },
+      {
+        path : '/dashboard/all-fatwas',
+        name : 'All Fatwas',
+        component : () => import(/* webpackChunkName: "about" */ '@/components/dashboard/AllFatwas.vue')
+      },
+      {
+        path : '/dashboard/edit-fatwa/:id',
+        name : 'Edit Fatwa',
+        component : () => import(/* webpackChunkName: "about" */ '@/components/dashboard/EditFatwa.vue')
+      },
     ]
   },
 ]

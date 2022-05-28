@@ -37,6 +37,10 @@ export const deleteQuestion = id => {
   return questionsCollection.doc(id).delete()
 }
 
+export const deleteFatwa = id => {
+  return fatwaCollection.doc(id).delete()
+}
+
 // export const useLoadUsers = () => {
 //   const users = ref([])
 //   const close = usersCollection.onSnapshot(snapshot => {

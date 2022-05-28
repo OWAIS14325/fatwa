@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-import { getAllQuestions, deleteQuestion, getAllFatwas } from '@/firebase/firebase';
+import { getAllQuestions, deleteQuestion, getAllFatwas, deleteFatwa } from '@/firebase/firebase';
 
 export default createStore({
   state: {
@@ -17,65 +17,66 @@ export default createStore({
         count : 0,
         value : 'FASTING'
       },
-      {
-        name: "AQAA'ID (BELIEFS)› - (100)",
-        count : 0,
-        value : 'BELIEFS'
-      },
-      {
-        name: 'SALAAH (PRAYER)› - (400)',
-        count : 0,
-        value : 'PRAYER'
-      },
-      {
-        name: 'HAJJ/ UMRAH (PILGRIMAGE) - (500)',
-        count : 0,
-      },
-      {
-        name: 'NIKAH & TALAQ (MARRIAGE & DIVORCE) - (240)',
-        count : 0,
-        value : 'PILGRIMAGE'
-      },
-      {
-        name: "BUYOO' (MONEY-RELATED ISSUES) - (350)",
-        count : 0,
-        value : 'MONEY-RELATED'
-      },
-      {
-        name: 'AADAAB (ETTIQUETTES & MANNERS) - (330)',
-        count : 0,
-        value : 'ETTIQUETTES'
-      },
-      {
-        name: 'HALAAL & HARAAM - (220)',
-        count : 0,
-        value : 'HALAAL'
-      },
-      {
-        name: 'WAQF & CHARITY - (120)',
-        count : 0,
-        value : 'WAQF'
-      },
-      {
-        name: "TAHAARAH (CLEANLINESS) - (180)",
-        count : 0,
-        value : 'CLEANLINESS'
-      },
-      {
-        name: 'OATHS & VOWS - (160)',
-        count : 0,
-        value : 'OATHS'
-      },
-      {
-        name: 'CUSTOMS - (270)',
-        count : 0,
-        value : 'CUSTOMS'
-      },
-      {
-        name: "QUR'AN & HADEETH› - (670)",
-        count : 0,
-        value : 'HADEETH'
-      },
+      // {
+      //   name: "AQAA'ID (BELIEFS)› - (100)",
+      //   count : 0,
+      //   value : 'BELIEFS'
+      // },
+      // {
+      //   name: 'SALAAH (PRAYER)› - (400)',
+      //   count : 0,
+      //   value : 'PRAYER'
+      // },
+      // {
+      //   name: 'HAJJ/ UMRAH (PILGRIMAGE) - (500)',
+      //   count : 0,
+      //   values : 'PILGRIMAGE'
+      // },
+      // {
+      //   name: 'NIKAH & TALAQ (MARRIAGE & DIVORCE) - (240)',
+      //   count : 0,
+      //   value : 'PILGRIMAGE'
+      // },
+      // {
+      //   name: "BUYOO' (MONEY-RELATED ISSUES) - (350)",
+      //   count : 0,
+      //   value : 'MONEY-RELATED'
+      // },
+      // {
+      //   name: 'AADAAB (ETTIQUETTES & MANNERS) - (330)',
+      //   count : 0,
+      //   value : 'ETTIQUETTES'
+      // },
+      // {
+      //   name: 'HALAAL & HARAAM - (220)',
+      //   count : 0,
+      //   value : 'HALAAL'
+      // },
+      // {
+      //   name: 'WAQF & CHARITY - (120)',
+      //   count : 0,
+      //   value : 'WAQF'
+      // },
+      // {
+      //   name: "TAHAARAH (CLEANLINESS) - (180)",
+      //   count : 0,
+      //   value : 'CLEANLINESS'
+      // },
+      // {
+      //   name: 'OATHS & VOWS - (160)',
+      //   count : 0,
+      //   value : 'OATHS'
+      // },
+      // {
+      //   name: 'CUSTOMS - (270)',
+      //   count : 0,
+      //   value : 'CUSTOMS'
+      // },
+      // {
+      //   name: "QUR'AN & HADEETH› - (670)",
+      //   count : 0,
+      //   value : 'HADEETH'
+      // },
       {
         name: "DAILY MATTERS - (380)",
         count : 0,
@@ -112,7 +113,7 @@ export default createStore({
     // Get Categories List
     getCategories(state){
       return state.fatwaCategories
-    }
+    },
   },
   mutations: {
     /**
@@ -143,6 +144,16 @@ export default createStore({
       state.questions.splice(res, 1)
     },
 
+    /**
+     * Remove Fatwa from fatwas store
+     * @param {Object} state 
+     * @param {String} id 
+     */
+     removeFatwa(state, id){
+      const res = state.fatwas.findIndex(que => que.id === id)
+      state.fatwas.splice(res, 1)
+    },
+
   },
   actions: {
     /**
@@ -169,6 +180,11 @@ export default createStore({
       deleteQuestion(id) ;
       context.commit('removeQuestion', id)
     },
+
+    deleteFatwa(context, id){
+      deleteFatwa(id) ;
+      context.commit('removeFatwa', id)
+    }
 
 
   },

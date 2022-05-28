@@ -54,7 +54,7 @@
         ">
       Edit
     </button>
-    <button type="button" @click="saveContent" class="
+    <button type="button" @click="updateContent" class="
           ml-3
           inline-flex
           items-center
@@ -88,11 +88,11 @@ import 'mosha-vue-toastify/dist/style.css'
 export default {
   data() {
     return {
-      qid: null,
+      fatwaId : null,
       question: "",
       img1: "",
       imageData: null,
-      editorContent: "<p>Write Fatwa Here</p>",
+      editorContent: "",
       shortDescription: 'Short Description',
       author: '',
       fatwaCategory : 'general'
@@ -105,12 +105,16 @@ export default {
     fatwaCategories(){
      return this.$store.getters['getCategories']
     },
+    editor() {
+        console.log(this.$refs.editor)
+      return this.$refs.editor;
+    }
   },
   created() {
     this.setFormData() ;
   },
   methods: {
-    async saveContent() {
+    async updateContent() {
       const fatwaObject = {
         qid: this.qid,
         question: this.question,
@@ -151,12 +155,20 @@ export default {
     },
 
     async setFormData(){
-      this.qid = this.$route.params.id;
-      const questions = await this.$store.dispatch('fetchQuestions') ;
-      const que = questions.filter((que) => que.id === this.qid)
-      this.question = que[0].data.question ;
-     
+      this.fatwaId = this.$route.params.id;
+      const fatwaList = await this.$store.dispatch('fetchFatwas') ;
+      const fatwa = fatwaList.filter((fatwa) => fatwa.id === this.fatwaId)
+      this.question = fatwa[0].data.question,
+      this.editorContent = fatwa[0].data.answer,
+      this.shortDescription = fatwa[0].data.shortDesc,
+      this.author = fatwa[0].data.author,
+      this.fatwaCategory  = fatwa[0].data.fatwaCategory
+
+      console.log(this.editorContent);
     }
   },
+  mounted(){
+    
+  }
 };
 </script>
