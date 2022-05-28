@@ -16,7 +16,7 @@
                 <div class="sm:col-span-2">
                   <div class="space-y-4">
                     <div class="text-lg leading-6 font-medium space-y-1">
-                      <h3><router-link to="/single-fatwa">{{ fatwa.data.question }}</router-link></h3>
+                      <h3><router-link :to="`/single-fatwa/${fatwa.id}`">{{ fatwa.data.question }}</router-link></h3>
                       <p class="text-indigo-600">{{fatwa.data.author}}</p>
                     </div>
                     <div class="text-lg">

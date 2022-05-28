@@ -24,6 +24,15 @@
     <input class="ml-2 border border-gray-200" type="text" v-model="author" />
   </div>
 
+  <div class="mt-5">
+    <label for="fatwaCategor">Fatwa Category</label>
+
+    <select class="border ml-2 py-2" name="fatwaCategory" id="fatwaCategory" v-model="fatwaCategory">
+     <option value="general" selected>General</option>
+      <option v-for="category in fatwaCategories" :value="category.value" :key="category.value">{{ category.name }}</option>
+    </select>
+  </div>
+
   <div class="mt-8 flex">
     <button type="button" class="
           inline-flex
@@ -70,6 +79,7 @@
 </template>
 
 <script>
+
 import RichTextEditor from "@/components/dashboard/RichTextEditor.vue";
 import firebase from "firebase";
 import { createFatwa } from "@/firebase/firebase.js"
@@ -84,13 +94,17 @@ export default {
       imageData: null,
       editorContent: "<p>Write Fatwa Here</p>",
       shortDescription: 'Short Description',
-      author: ''
+      author: '',
+      fatwaCategory : 'general'
     };
   },
   components: {
     RichTextEditor,
   },
   computed: {
+    fatwaCategories(){
+     return this.$store.getters['getCategories']
+    }
   },
   created() {
     this.setQuestion() ;
@@ -104,6 +118,7 @@ export default {
         author: 'Muaddd',
         fatwaImage: this.img1,
         shortDesc: this.shortDescription,
+        fatwaCategory : this.fatwaCategory,
         date: Date.now()
       }
       await createFatwa(fatwaObject)

@@ -43,10 +43,11 @@
 <script>
 import SidebarContent from "@/components/SidebarContent.vue";
 import BaseHeader from "@/components/BaseHeader.vue";
+import BaseFooter from "@/components/BaseFooter.vue";
 import { getFatwa } from "@/firebase/firebase.js"
 
 export default {
-  components: { SidebarContent, BaseHeader },
+  components: { SidebarContent, BaseHeader, BaseFooter },
   data(){
     return {
       fatwaDetails : null
@@ -68,14 +69,17 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style >
 h3 {
   font-size: 23px;
   font-weight: 500;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-ul, ol {
+ul, ol, li {
   list-style: auto;
+}
+.ql-align-center{
+  text-align: center !important;
 }
 </style>
