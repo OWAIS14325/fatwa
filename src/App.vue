@@ -8,7 +8,8 @@
 <script>
 export default {
   async created(){
-   await this.$store.dispatch('fetchQuestions')
+   await this.$store.dispatch('fetchQuestions') ;
+   await this.$store.dispatch('fetchFatwas') ;
     
   }
 }

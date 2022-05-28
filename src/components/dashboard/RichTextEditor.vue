@@ -1,6 +1,6 @@
 <template>
   <QuillEditor :value="modelValue"
-    @input="$emit('update:modelValue', $event.target.value)" theme="snow" toolbar="#custom-toolbar">
+    @input="$emit('update:modelValue', $event.target.value)" theme="snow" toolbar="#custom-toolbar" contentType="html">
     <template #toolbar>
       <div id="custom-toolbar">
         <select class="ql-size">

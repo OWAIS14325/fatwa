@@ -23,7 +23,7 @@ const routes = [
     component: FatwaList
   },
   {
-    path: '/single-fatwa/',
+    path: '/single-fatwa/:fatwaId',
     name: 'about',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route

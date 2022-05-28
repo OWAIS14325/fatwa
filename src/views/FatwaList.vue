@@ -8,23 +8,23 @@
             <h1 id="primary-heading" class="sr-only">Photos</h1>
             <!-- Your content -->
              <ul role="list" class="space-y-12 sm:divide-y sm:divide-gray-200 sm:space-y-0 sm:-mt-8 lg:gap-x-8 lg:space-y-0">
-            <li v-for="person in fatwas" :key="person.name" class="sm:py-8">
+            <li v-for="fatwa in fatwaList" :key="fatwa.id" class="sm:py-8">
               <div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
                 <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
-                  <img class="object-cover shadow-lg rounded-lg" :src="person.imageUrl" alt="" />
+                  <img class="object-cover shadow-lg rounded-lg" :src="fatwa.data.fatwaImage" alt="" />
                 </div>
                 <div class="sm:col-span-2">
                   <div class="space-y-4">
                     <div class="text-lg leading-6 font-medium space-y-1">
-                      <h3><router-link to="/single-fatwa">{{ person.name }}</router-link></h3>
-                      <p class="text-indigo-600">{{ person.role }}</p>
+                      <h3><router-link to="/single-fatwa">{{ fatwa.data.question }}</router-link></h3>
+                      <p class="text-indigo-600">{{fatwa.data.author}}</p>
                     </div>
                     <div class="text-lg">
-                      <p class="text-gray-500">{{ person.bio }}</p>
+                      <p class="text-gray-500" v-html="fatwa.data.shortDesc"></p>
                     </div>
                     <ul role="list" class="flex space-x-5">
                       <li>
-                        <router-link class="text-base text-amber-500" to="/single-fatwa">Read More</router-link>
+                        <router-link class="text-base text-amber-500" :to="`/single-fatwa/${fatwa.id}`">Read More</router-link>
                       </li>
                     </ul>
                   </div>
@@ -160,8 +160,15 @@ export default {
       fatwas
     }
   },
-  created(){
-      console.log(this.$route.name);
+  computed : {
+    fatwaList(){
+      return this.$store.getters['getAllFatwas']
+    }
+  },
+  mounted(){
+     
+     console.log(this.fatwaList);
+
   },
   components : {
     SidebarContent,

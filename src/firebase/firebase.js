@@ -24,10 +24,10 @@ export const createQuestion = que => {
 export const createFatwa = fatwa => {
   return fatwaCollection.add(fatwa)
 }
-// export const getUser = async id => {
-//   const user = await usersCollection.doc(id).get()
-//   return user.exists ? user.data() : null
-// }
+export const getFatwa = async id => {
+  const fatwa = await fatwaCollection.doc(id).get()
+  return fatwa.exists ? fatwa.data() : null
+}
 
 // export const updateUser = (id, user) => {
 //   return usersCollection.doc(id).update(user)
@@ -46,6 +46,7 @@ export const deleteQuestion = id => {
 //   return users
 // }
 
+// Get All Questions from Database
 export const getAllQuestions = async () => {
     const questions = [];
     await db.collection("questions").get().then((querySnapshot) => {
@@ -56,4 +57,17 @@ export const getAllQuestions = async () => {
         });
     });
    return questions.length ? questions : null
+}
+
+// Get All Fatwa List from Database
+export const getAllFatwas = async () => {
+  const fatwas = [];
+  await db.collection("fatwas").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+          // doc.data() is never undefined for query doc snapshots
+          // console.log(doc.id, " => ", doc.data());
+          fatwas.push({id:doc.id , data : doc.data()})
+      });
+  });
+ return fatwas.length ? fatwas : null
 }
