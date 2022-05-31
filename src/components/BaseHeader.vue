@@ -16,14 +16,15 @@
                 </div>
               </div>
               <div class="hidden space-x-8 md:flex md:ml-10">
-                <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-base font-medium text-white hover:text-gray-300">{{ item.name }}</a>
+                <router-link v-for="item in navigation" :key="item.name" :to="item.href" class="text-base font-medium text-white hover:text-gray-300">{{ item.name }}</router-link>
+                <a  href="https://itqaninstitute.org/courses/" class="text-base font-medium text-white hover:text-gray-300">Itqan Courses</a>
               </div>
             </div>
             <div class="hidden md:flex md:items-center md:space-x-6">
               <!-- <a href="#" class="text-base font-medium text-white hover:text-gray-300">
                 Log in
               </a> -->
-              <router-link to="ask-fatwa" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-amber-500 hover:bg-amber-700">
+              <router-link to="/ask-fatwa" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-amber-500 hover:bg-amber-700">
                 ASK A FATWA
               </router-link>
             </div>
@@ -47,9 +48,10 @@
               <div class="pt-5 pb-6">
                 <div class="px-2 space-y-1">
                   <router-link v-for="item in navigation" :key="item.name" :to="item.href" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">{{ item.name }}</router-link>
+                  <a  href="https://itqaninstitute.org/courses/" class="text-base font-medium text-white hover:text-gray-300">Itqan Courses</a>
                 </div>
                 <div class="mt-6 px-5">
-                  <router-link to="ask-fatwa" class="block text-center w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium hover:from-amber-600 hover:to-orange-700">ASK A FATWA</router-link>
+                  <router-link to="/ask-fatwa" class="block text-center w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium hover:from-amber-600 hover:to-orange-700">ASK A FATWA</router-link>
                 </div>
                 <!-- <div class="mt-6 px-5">
                   <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="#" class="text-gray-900 hover:underline">Login</a></p>

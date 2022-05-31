@@ -3,12 +3,14 @@ import firebase from 'firebase'
 
 const config = {
   // Firebase config here
-  apiKey: "AIzaSyDnLfbRnlQP3weInXN_YxrG6ovAULwYldE",
-  authDomain: "itqan-9efca.firebaseapp.com",
-  projectId: "itqan-9efca",
-  storageBucket: "itqan-9efca.appspot.com",
-  messagingSenderId: "722704813297",
-  appId: "1:722704813297:web:97d62a31b7f49b5028ad50"
+    apiKey: "AIzaSyC7JgkUS8jSpWaBCh5FKt3YLTLr7BTXAoc",
+    authDomain: "itqan-6f9fe.firebaseapp.com",
+    projectId: "itqan-6f9fe",
+    storageBucket: "itqan-6f9fe.appspot.com",
+    messagingSenderId: "540111028301",
+    appId: "1:540111028301:web:e3a17958fd18f613a85c04",
+    measurementId: "G-BX955H68L7"
+
 }
 
 const firebaseApp = firebase.initializeApp(config)

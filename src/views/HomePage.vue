@@ -29,7 +29,7 @@
                           <button type="submit" class="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium hover:from-amber-600 hover:to-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900">Search Fatwas</button>
                         </div>
                       </div>
-                      <!-- <p class="mt-3 text-sm text-gray-300 sm:mt-4">Start your free 14-day trial, no credit card necessary. By providing your email, you agree to our <a href="#" class="font-medium text-white">terms of service</a>.</p> -->
+                      
                     </form>
                   </div>
                 </div>
@@ -177,7 +177,7 @@
                 OUR ONLINE COURSES
               </p>
               <p class="mt-8 max-w-prose mx-auto text-xl text-gray-500 sm:w-1/4 w-full">
-                <button type="submit" class="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium hover:from-amber-600 hover:to-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900">View Courses</button>
+                <a href="https://itqaninstitute.org/courses/" class="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium hover:from-amber-600 hover:to-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900">View Courses</a>
               </p>
             </div>
             
