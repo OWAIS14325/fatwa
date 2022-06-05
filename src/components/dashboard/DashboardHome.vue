@@ -29,7 +29,7 @@
               </nav>
             </div>
             <div class="flex-shrink-0 flex bg-gray-700 p-4">
-              <a href="#" class="flex-shrink-0 group block">
+              <!-- <a href="#" class="flex-shrink-0 group block">
                 <div class="flex items-center">
                   <div>
                     <img class="inline-block h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
@@ -43,7 +43,7 @@
                     </p>
                   </div>
                 </div>
-              </a>
+              </a> -->
             </div>
           </div>
         </TransitionChild>
@@ -66,6 +66,7 @@
               <component :is="item.icon" :class="[item.current ? 'text-gray-300' : 'text-gray-400 group-hover:text-gray-300', 'mr-3 flex-shrink-0 h-6 w-6']" aria-hidden="true" />
               {{ item.name }}
             </router-link>
+            <button @click.prevent="logout" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2 w-32">Logout</button>
           </nav>
         </div>
         
@@ -99,6 +100,7 @@
 <script>
 import { ref } from 'vue'
 import { Dialog, DialogOverlay, TransitionChild, TransitionRoot } from '@headlessui/vue'
+import firebase from "firebase"
 import {
   FolderIcon,
   HomeIcon,
@@ -111,7 +113,7 @@ const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: HomeIcon, current: true },
   { name: 'Questions', href: '/dashboard/questions', icon: UsersIcon, current: false },
   { name: 'All Fatwas', href: '/dashboard/all-fatwas', icon: FolderIcon, current: false },
-  { name: 'Visit Website', href: '/', icon: FolderIcon, current: false },
+  { name: 'Visit Website', href: '/', icon: FolderIcon, current: false }, 
 ]
 
 export default {
@@ -131,5 +133,17 @@ export default {
       sidebarOpen,
     }
   },
+  methods : {
+    logout(){
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.replace({
+            name: "homepage"
+          });
+        });
+    }
+  }
 }
 </script>

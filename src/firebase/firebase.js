@@ -13,7 +13,7 @@ const config = {
 
 }
 
-const firebaseApp = firebase.initializeApp(config)
+export const firebaseApp = firebase.initializeApp(config)
 
 const db = firebaseApp.firestore()
 const questionsCollection = db.collection('questions')

@@ -6,6 +6,10 @@ export default createStore({
     isDashboard : false,
     questions : [],
     fatwas : [],
+    user: {
+      loggedIn: false,
+      data: null
+    },
     fatwaCategories : [
       {
         name: 'ZAKAAH (ALMS) - (300)',
@@ -114,6 +118,10 @@ export default createStore({
     getCategories(state){
       return state.fatwaCategories
     },
+
+    user(state){
+      return state.user
+    }
   },
   mutations: {
     /**
@@ -154,6 +162,13 @@ export default createStore({
       state.fatwas.splice(res, 1)
     },
 
+    SET_LOGGED_IN(state, value) {
+      state.user.loggedIn = value;
+    },
+    SET_USER(state, data) {
+      state.user.data = data;
+    }
+
   },
   actions: {
     /**
@@ -184,6 +199,19 @@ export default createStore({
     deleteFatwa(context, id){
       deleteFatwa(id) ;
       context.commit('removeFatwa', id)
+    },
+
+    fetchUser({ commit }, user) {
+      commit("SET_LOGGED_IN", user !== null);
+
+      if (user) {
+        commit("SET_USER", {
+          displayName: user.displayName,
+          email: user.email
+        });
+      } else {
+        commit("SET_USER", null);
+      }
     }
 
 

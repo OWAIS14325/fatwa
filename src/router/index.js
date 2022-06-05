@@ -1,10 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { app } from "../main.js"
 import HomePage from "@/views/HomePage.vue"
 import AskFatwa from "@/views/ContactPage.vue"
 import FatwaList from "@/views/FatwaList.vue"
 import DashboardHome from "@/components/dashboard/DashboardHome.vue"
 import FatwaQuestions from "@/components/dashboard/FatwaQuestions.vue"
 import AnswerFatwa from "@/components/dashboard/AnswerFatwa.vue"
+import Login from "@/components/LoginPage.vue"
+
+function authenticateLogin(to, from , next){
+  const user = app.$store.getters['user']
+  if (user.loggedIn) next();
+    else next({ name: 'login' });
+}
 
 const routes = [
   {
@@ -31,9 +39,15 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/SingleFatwa.vue')
   },
   {
+    path: '/login',
+    name: 'login',
+    component: () => Login
+},
+  {
     path: '/dashboard',
     name: 'Dashboard',
     component: DashboardHome,
+    beforeEnter : [authenticateLogin],
     children : [
       {
         path : '/dashboard/questions',
@@ -58,6 +72,8 @@ const routes = [
     ]
   },
 ]
+
+
 
 const router = createRouter({
   history: createWebHistory(),

@@ -347,13 +347,11 @@ export default {
   computed : {
     fatwaList(){
       const res = this.$store.getters['getAllFatwas']
-      console.log(res);
       return res.filter((item, index) => index < 4)
     }
   },
   async created(){
     await this.$store.dispatch('fetchFatwas')
-    console.log(this.fatwaList);
   }
 }
 </script>
